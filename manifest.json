@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Auto Hide Instagram Stories",
+    "version": "1.0",
+    "description": "Automatically clicks 'Hide story from' on Instagram.",
+    "icons": {
+        "48": "icons/icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "https://www.instagram.com/"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.instagram.com/*"],
+            "js": ["HideAll.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/48.png"
+    }
+}
+
